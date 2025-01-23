@@ -26,7 +26,7 @@ header {
   background-image: url(../assets/images/header.jpg);
   background-size: cover;
   background-position: center;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   margin-bottom: 20px;
@@ -101,6 +101,143 @@ nav ul li a {
 }
 
 .of {
-  background-color: white;
+  background-color: black;
   width: 24%;
+  height: 283.73px;
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.of-1{
+  background-color: black;
+  background-image: url(../assets/images/Mask\ group-1.png);
+}
+
+.of-2{
+  background-image: url(../assets/images/Mask\ group-2.png);
+}
+.of-3{
+  background-image: url(../assets/images/Mask\ group-3.png);
+}
+.of-4{
+  background-image: url(../assets/images/Mask\ group.png);
+}
+
+.of-1 div{
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.of-2 div{
+  background-color: white;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.of-3 div{
+  background-color: white;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.of-4 div{
+  background-color: white;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+
+/* Sección competencias */
+#competencias{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.compeimg{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.compe{
+  flex: 0 0 calc(16% - 10px); /* 12.5% = 100% / 8 elementos, ajustado para el gap */
+  box-sizing: border-box; /* Asegura que el padding y border no afecten el ancho total */
+  background: lightblue;
+  text-align: center;
+  padding: 10px;
+}
+/* Portafolio */
+#portafolio{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#portafolio a{
+  height: 250px;
+  width: 250px;
+}
+.port-1{
+  background-image: url(../assets/images/ranzao-mini.png);
+  background-size: cover;
+  background-repeat: repeat;
+}
+/* Contacto */
+#contacto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Footer */
+
+footer{
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+}
+
+footer ul li{
+  padding: 0 10px;
+  margin: 20px 0;
 }
