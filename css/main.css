@@ -72,49 +72,53 @@ nav ul li a {
 .hero-text {
   position: absolute;
   color: white;
-  padding: 20px;
+  padding: 60px;
   border-radius: 5px;
-  text-align: center;
-  width: 500px;  /* genera desbordamiento en tamaños pequeños, arreglar */
-  margin-top: -60px;
+  max-width: 600px; /* Fija el ancho del contenedor */
+  margin: 0 auto; /* Centra el contenedor */
+  text-align: center; /* Centra el texto dentro del contenedor */
 }
 
 .hero-text h1 {
-  font-size: 64px;
+  font-size: clamp(28px, 5vw, 64px); /* Mínimo 28px, escala hasta 64px, ajustado a 5% del ancho de la ventana */
   font-weight: bold;
   margin: 0;
+  text-align: center;
 }
 
 .hero-text p {
+  font-size: clamp(16px, 2.5vw, 24px); /* Mínimo 16px, escala hasta 24px */
   margin-top: 10px;
+  font-weight: normal;
+  text-align: center;
 }
 
-.hero-text a {
-  background: rgba(0, 0, 0, 0.6);
+
+.hero-text span{
+  font-weight: bold;
 }
 
 /*Habilidades*/
 
 #oficio {
-  display: flex;
-  justify-content: space-between;
+  display: grid; /* Activa el modo Grid */
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 20px; /* Espacio entre columnas y filas */
+  padding: 20px 0;
 }
 
 .of {
-  background-color: black;
-  width: 24%;
-  height: 283.73px;
-  padding: 30px;
-  border-radius: 10px;
+
+  background: black; /* Fondo opcional */
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd; /* Borde opcional */
+  border-radius: 8px; /* Esquinas redondeadas */
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
 }
 
 .of-1{
-  background-color: black;
+  
   background-image: url(../assets/images/Mask\ group-1.png);
 }
 
@@ -167,6 +171,13 @@ nav ul li a {
   justify-content: center;
   border-radius: 10px;
 }
+.of-titu{
+  font-size: 29px;
+  font-weight: bold;
+}
+.of-text{
+  font-size: 18px;
+}
 
 
 /* Sección competencias */
@@ -174,38 +185,62 @@ nav ul li a {
   background-color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+  border-radius: 10px;
+  
+}
+.competitu{
+  padding: 40px 0;
+  text-align: center;
+}
+.competitu h2{
+  font-weight: bold;
+  font-size: 29px;
+  padding: 10px 0;
+}
+.competitu p{
+  font-weight: normal;
+  font-size: 18px;
+  padding: 10px 0;
 }
 .compeimg{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 columnas de igual tamaño */
+  gap: 10px; /* Espaciado entre los elementos */
+  width: 100%;
+  padding-bottom: 40px;
 }
 
 .compe{
-  flex: 0 0 calc(16% - 10px); /* 12.5% = 100% / 8 elementos, ajustado para el gap */
-  box-sizing: border-box; /* Asegura que el padding y border no afecten el ancho total */
-  background: lightblue;
   text-align: center;
   padding: 10px;
+  box-sizing: border-box;
 }
 /* Portafolio */
 #portafolio{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 5 columnas en pantallas grandes */
+  gap: 20px; /* Espaciado entre los elementos */
+  padding: 20px 0;
 }
-#portafolio a{
-  height: 250px;
-  width: 250px;
+
+.port{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1; /* Mantiene elementos cuadrados */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
 }
 .port-1{
   background-image: url(../assets/images/ranzao-mini.png);
-  background-size: cover;
-  background-repeat: repeat;
+}
+.port-1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 /* Contacto */
 #contacto{
@@ -240,4 +275,47 @@ footer ul {
 footer ul li{
   padding: 0 10px;
   margin: 20px 0;
+}
+
+
+
+/* Medie Queries */
+@media (max-width: 1200px) {
+  .compeimg {
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas medianas */
+  }
+  #oficio {
+    grid-template-columns: repeat(2, 1fr); /* Mantén 4 columnas si hay espacio suficiente */
+  }
+  #portafolio {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .compeimg {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+  }
+  #oficio {
+    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas en pantallas pequeñas */
+  }
+  #portafolio {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas por fila */
+    grid-template-rows: auto auto auto; /* Hasta 3 filas */
+    justify-content: center; /* Centra las columnas horizontalmente */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .compeimg {
+    grid-template-columns: repeat(2, 1fr); /* 1 columna en pantallas muy pequeñas */
+  }
+  #oficio {
+    grid-template-columns: repeat(1, 1fr); /* 1 columna en pantallas muy pequeñas */
+  }
+  #portafolio {
+    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    gap: 15px; /* Reduce el espacio entre elementos */
+  }
 }
