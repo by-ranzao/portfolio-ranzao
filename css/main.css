@@ -11,7 +11,6 @@
 body {
   margin: 0;
   padding: 40px;
-  /* Simula el cuadro flotante */
   background-color: #E7E7E7;
 }
 
@@ -23,21 +22,16 @@ section {
 header {
   width: 100%;
   height: 90vh;
-  background-image: url(../assets/images/header.jpg);
-  background-size: cover;
-  background-position: center;
+  background: url(../assets/images/header.jpg) center/cover no-repeat;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
   margin-bottom: 20px;
 }
 
 /* Navbar */
 nav {
   color: white;
-  padding-top: 36px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 36px 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,8 +40,6 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
 }
 
 nav ul li {
@@ -61,81 +53,76 @@ nav ul li a {
   transition: color 0.3s;
 }
 
+.logo a img {
+  height: 40px;
+  width: auto;
+}
+
 /* Zona principal */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 80vh;
 }
 
 .hero-text {
   position: absolute;
   color: white;
-  padding: 60px;
+  padding: 20px 60px;
   border-radius: 5px;
-  max-width: 600px; /* Fija el ancho del contenedor */
-  margin: 0 auto; /* Centra el contenedor */
-  text-align: center; /* Centra el texto dentro del contenedor */
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero-text h1 {
-  font-size: clamp(28px, 5vw, 64px); /* Mínimo 28px, escala hasta 64px, ajustado a 5% del ancho de la ventana */
+  font-size: clamp(28px, 5vw, 64px);
   font-weight: bold;
-  margin: 0;
-  text-align: center;
 }
 
 .hero-text p {
-  font-size: clamp(16px, 2.5vw, 24px); /* Mínimo 16px, escala hasta 24px */
+  font-size: clamp(16px, 2.5vw, 24px);
   margin-top: 10px;
-  font-weight: normal;
-  text-align: center;
+  margin-bottom: 20px;
 }
 
-
-.hero-text span{
+.hero-text span {
   font-weight: bold;
 }
 
-/*Habilidades*/
+.btncv {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000000c7;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
 
+.btncv:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+/* Habilidades */
 #oficio {
-  display: grid; /* Activa el modo Grid */
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
-  gap: 20px; /* Espacio entre columnas y filas */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
   padding: 20px 0;
 }
 
 .of {
-
-  background: black; /* Fondo opcional */
+  background: black;
   color: white;
-  border: 1px solid #ddd; /* Borde opcional */
-  border-radius: 8px; /* Esquinas redondeadas */
-  padding: 20px; /* Espaciado interno */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.of-1{
-  
-  background-image: url(../assets/images/Mask\ group-1.png);
-}
-
-.of-2{
-  background-image: url(../assets/images/Mask\ group-2.png);
-}
-.of-3{
-  background-image: url(../assets/images/Mask\ group-3.png);
-}
-.of-4{
-  background-image: url(../assets/images/Mask\ group.png);
-}
-
-.of-1 div{
+.of div {
   background-color: white;
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   height: 60px;
   width: 60px;
@@ -143,45 +130,26 @@ nav ul li a {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
-.of-2 div{
-  background-color: white;
-  height: 60px;
-  width: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
+
+.of-1, .of-2, .of-3, .of-4 {
+  background-position: center;
+  background-size: cover;
 }
-.of-3 div{
-  background-color: white;
-  height: 60px;
-  width: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-}
-.of-4 div{
-  background-color: white;
-  height: 60px;
-  width: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-}
-.of-titu{
+
+.of-1 { background-image: url(../assets/images/Mask\ group-1.png); }
+.of-2 { background-image: url(../assets/images/Mask\ group-2.png); }
+.of-3 { background-image: url(../assets/images/Mask\ group-3.png); }
+.of-4 { background-image: url(../assets/images/Mask\ group.png); }
+
+.of-titu {
   font-size: 29px;
   font-weight: bold;
 }
-.of-text{
-  font-size: 18px;
-}
-
 
 /* Sección competencias */
-#competencias{
+#competencias {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -189,133 +157,185 @@ nav ul li a {
   align-items: center;
   padding: 20px;
   border-radius: 10px;
-  
 }
-.competitu{
-  padding: 40px 0;
+
+.competitu {
   text-align: center;
+  padding: 40px 0;
 }
-.competitu h2{
+
+.competitu h2 {
   font-weight: bold;
   font-size: 29px;
   padding: 10px 0;
 }
-.competitu p{
+
+.competitu p {
   font-weight: normal;
   font-size: 18px;
   padding: 10px 0;
 }
-.compeimg{
+
+.compeimg {
   display: grid;
-  grid-template-columns: repeat(8, 1fr); /* 8 columnas de igual tamaño */
-  gap: 10px; /* Espaciado entre los elementos */
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
   width: 100%;
   padding-bottom: 40px;
 }
 
-.compe{
+.compe {
   text-align: center;
   padding: 10px;
-  box-sizing: border-box;
 }
+
 /* Portafolio */
-#portafolio{
+#portafolio {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 5 columnas en pantallas grandes */
-  gap: 20px; /* Espaciado entre los elementos */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   padding: 20px 0;
 }
 
-.port{
+.port {
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  aspect-ratio: 1; /* Mantiene elementos cuadrados */
-  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px;
+  aspect-ratio: 1;
+  border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: block;
 }
-.port-1{
-  background-image: url(../assets/images/ranzao-mini.png);
+
+.port span {
+  background-color: #ffffff1e;
+  padding: 6px 12px;
+  border-radius: 6px;
 }
-.port-1:hover {
+
+.port-1 { background-image: url(../assets/images/ranzao-mini.png); }
+.port-2 { background-image: url(../assets/images/patty.png); }
+.port-3 { background-image: url(../assets/images/phoyography.png); }
+.port-4 { background-image: url(../assets/images/lenocreativo.png); }
+
+.port:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
+
 /* Contacto */
-#contacto{
+#contacto {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 60px 20px;
+  text-align: center;
+  background-image: url(../assets/images/contactback.png);
+}
+
+.info {
+  font-size: clamp(16px, 2vw, 24px);
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contacto h3 {
+  font-size: clamp(28px, 4vw, 56px);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mail {
+  font-size: clamp(20px, 3vw, 29px);
+  font-weight: 400;
 }
 
 /* Footer */
-
-footer{
+footer {
   background-color: black;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 40px 20px;
   border-radius: 10px;
   margin-top: 20px;
+  text-align: center;
+}
+
+.logo-footer img {
+  height: 60px;
+  width: auto;
+  margin-bottom: 20px;
 }
 
 footer ul {
   list-style: none;
   display: flex;
+  margin-bottom: 20px;
 }
 
-footer ul li{
+footer ul li {
   padding: 0 10px;
   margin: 20px 0;
 }
 
+footer p {
+  font-size: clamp(12px,4vw,24px);
+  margin-top: 10px;
+}
 
+/* Media Queries */
 
-/* Medie Queries */
 @media (max-width: 1200px) {
   .compeimg {
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas medianas */
+    grid-template-columns: repeat(4, 1fr);
   }
+
   #oficio {
-    grid-template-columns: repeat(2, 1fr); /* Mantén 4 columnas si hay espacio suficiente */
+    grid-template-columns: repeat(2, 1fr);
   }
+
   #portafolio {
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .compeimg {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    grid-template-columns: repeat(2, 1fr);
   }
+
   #oficio {
-    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas en pantallas pequeñas */
+    grid-template-columns: repeat(2, 1fr);
   }
+
   #portafolio {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas por fila */
-    grid-template-rows: auto auto auto; /* Hasta 3 filas */
-    justify-content: center; /* Centra las columnas horizontalmente */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    justify-content: center;
     gap: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .compeimg {
-    grid-template-columns: repeat(2, 1fr); /* 1 columna en pantallas muy pequeñas */
+    grid-template-columns: repeat(2, 1fr);
   }
+
   #oficio {
-    grid-template-columns: repeat(1, 1fr); /* 1 columna en pantallas muy pequeñas */
+    grid-template-columns: repeat(1, 1fr);
   }
+
   #portafolio {
-    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
-    gap: 15px; /* Reduce el espacio entre elementos */
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 }
