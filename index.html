@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ess">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,121 +12,43 @@
 </head>
 
 <body>
-    <header>
-
-        <!-- Navbar -->
-        <nav>
-            <div class="logo"><a href="../index.html">
-                    <img src="../../assets/images/logo.svg" alt="">
-                </a></div>
-        </nav>
-
-        <!-- Zona principal -->
-        <div class="hero">
-            <div class="hero-text">
-                <h1>Hey! ¿Que tal?</h1>
-                <p>Soy <span>RANZAO</span>, Diseñador y Programador apasionado por la creatividad y la tecnología.
-                    Siempre dispuesto
-                    a enfrentar nuevos desafíos y aprender.</p>
-                    <a href="../../assets/documents/cv.pdf" download="Curriculum_Nicolas_Espinoza_Ranzao " class="btncv">Descargar CV</a>
-
-            </div>
+    <!-- Navegación -->
+    <nav>
+        <div class="logo">
+            <img src="/assets/images/logo.svg" alt="Mi Logo">
         </div>
-
-    </header>
-    <main>
-
-        <!-- Sección Competencias Tecnológicas -->
-        <section id="competencias">
-            <div class="competitu">
-                <h2>Competencias Tecnológicas</h2>
-                <p>Algunas herramientas y tecnologías con las que trabajo :</p>
-            </div>
-            <div class="compeimg">
-                <div class="compe"><img src="../../assets/images/Js.svg" alt="">
-                    <p>Javascript</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/java.svg" alt="">
-                    <p>Java</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/git.svg" alt="">
-                    <p>Git</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/figma.svg" alt="">
-                    <p>Figma</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/nodejs.svg" alt="">
-                    <p>Node.js</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/express.svg" alt="">
-                    <p>Express.js</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/postgre.svg" alt="">
-                    <p>PostgreSQL</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/vscode.svg" alt="">
-                    <p>VsCode</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/ilustrator.svg" alt="">
-                    <p>Illustrator</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/photoshop.svg" alt="">
-                    <p>Photoshop</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/indesing.svg" alt="">
-                    <p>Indesign</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/spring.svg" alt="">
-                    <p>Springboot</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/affinity.svg" alt="">
-                    <p>Affinity</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/postman.svg" alt="">
-                    <p>Postman</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/blender.svg" alt="">
-                    <p>Blender</p>
-                </div>
-                <div class="compe"><img src="../../assets/images/mysql.svg" alt="">
-                    <p>MySQL</p>
-                </div>
-            </div>
-        </section>
-        <!-- Seccion Portafolio -->
-        <section id="portafolio">
-            <a href="pages/ranzao.html" class="port port-1">
-                <span>MARCA</span>
-            </a>
-            <a class="port port-2">
-                <span>MARCA</span>
-            </a>
-            <a class="port port-3">
-                <span>FOTOGRAFÍA</span>
-            </a>
-            <a class="port port-4">
-                <span>MARCA</span>
-            </a>
-        </section>
-        <!-- Sección Contacto -->
-        <section id="contacto">
-            <p class="info">Infromación de contacto</p>
-            <h3>Pongámonos en contacto</h3>
-            <p class="mail">by.ranzao@gmail.com</p>
-        </section>
-    </main>
-    <footer>
-        <div class="logo-footer"><a href="../es/home.html">
-                <img src="../../assets/images/logo.svg" alt="">
-            </a></div>
-        <ul>
-            <li><a href="#"><img src="../../assets/images/instagram.svg" alt=""></a></li>
-            <li><a href="#"><img src="../../assets/images/linkedin.svg" alt=""></a></li>
-            <li><a href="#"><img src="../../assets/images/behance.svg" alt=""></a></li>
-            <li><a href="#"><img src="../../assets/images/github.svg" alt=""></a></li>
+        <!-- Botón de menú para dispositivos móviles -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Sobre mí</a></li>
+            <li><a href="#">Proyectos</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="/assets/documents/cv.pdf" class="cv" download="cv_nicolas_espinoza">Descargar CV</a></li>
         </ul>
-        <p>© 2024 Ranzao. Todos los derechos reservados.</p>
+    </nav>
+
+
+    <!-- Contenido principal con imagen de fondo -->
+    <main>
+        <h1>Construyendo productos digitales, marcas y experiencias.</h1>
+        <p>Diseñador gráfico, UX/UI y programador. Me enfoco en usar el diseño y el desarrollo para crear experiencias
+            únicas. Siempre explorando y aprendiendo.</p>
+    </main>
+
+    <!-- Pie de página con derechos y redes sociales -->
+    <footer>
+        <p>&copy; 2025 RANZAO. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="#"><img src="assets/images/instagram.svg" alt="Facebook"></a>
+            <a href="#"><img src="assets/images/github.svg" alt="Facebook"></a>
+            <a href="#"><img src="assets/images/linkedin.svg" alt="Facebook"></a>
+        </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

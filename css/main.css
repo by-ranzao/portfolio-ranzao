@@ -9,333 +9,190 @@
 }
 
 body {
-  margin: 0;
-  padding: 40px;
-  background-color: #E7E7E7;
-}
-
-section {
-  padding: 20px 0;
-}
-
-/* Contenedor principal */
-header {
+  position: relative;
+  padding: 20px;
   width: 100%;
-  height: 90vh;
-  background: url(../assets/images/header.jpg) center/cover no-repeat;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-}
-
-/* Navbar */
-nav {
-  color: white;
-  padding: 36px 50px 0;
+  height: 100vh;
+  background: url('../assets/images/home.jpg') center/cover no-repeat;
+  overflow: hidden;
   display: flex;
-  justify-content: start;
-  align-items: start;
+  flex-direction: column;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: start; /* Centra verticalmente */
 }
 
-nav ul {
+/* Agregamos el overlay con un pseudo-elemento */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Overlay negro con 20% de opacidad */
+  z-index: 0; /* Asegura que quede debajo del contenido */
+}
+
+/* Estilos generales del nav */
+nav {
+  position: absolute; /* O fixed si quieres que sea siempre visible */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Espaciado entre logo y enlaces */
+  align-items: center;
+  padding: 15px 30px;
+  background: white; /* Fondo semitransparente opcional */
+  z-index: 2;
+  border-radius: 5px;
+}
+
+/* Logo */
+.logo img {
+  color: black;
+  height: 40px; /* Ajusta según el tamaño del logo */
+}
+/* Botón de menú hamburguesa: oculto en pantallas grandes */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+
+/* Estilos de la lista de enlaces */
+.nav-links {
   list-style: none;
   display: flex;
+  gap: 20px; /* Espacio entre enlaces */
 }
 
-nav ul li {
-  margin-left: 15px;
-}
-
-nav ul li a {
-  color: white;
+/* Estilos de los enlaces */
+.nav-links li a {
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.logo a img {
-  height: 40px;
-  width: auto;
-}
-
-/* Zona principal */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-}
-
-.hero-text {
-  position: absolute;
-  color: white;
-  padding: 20px 60px;
-  border-radius: 5px;
-  max-width: 680px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.hero-text h1 {
-  font-size: clamp(28px, 5vw, 64px);
-  font-weight: bold;
-}
-
-.hero-text p {
-  font-size: clamp(16px, 2.5vw, 24px);
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.hero-text span {
-  font-weight: bold;
-}
-
-.btncv {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #000000c7;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.btncv:hover {
-  background-color: #ffffff;
   color: black;
-}
-
-/* Habilidades */
-#oficio {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  padding: 20px 0;
-}
-
-.of {
-  background: black;
-  color: white;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.of div {
-  background-color: white;
-  background-size: cover;
-  height: 60px;
-  width: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.of-1, .of-2, .of-3, .of-4 {
-  background-position: center;
-  background-size: cover;
-}
-
-.of-1 { background-image: url(../assets/images/Mask\ group-1.png); }
-.of-2 { background-image: url(../assets/images/Mask\ group-2.png); }
-.of-3 { background-image: url(../assets/images/Mask\ group-3.png); }
-.of-4 { background-image: url(../assets/images/Mask\ group.png); }
-
-.of-titu {
-  font-size: 29px;
   font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
 }
-
-/* Sección competencias */
-#competencias {
-  background-color: white;
+.cv{
+  background-color: black;
+  color: white!important;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+main {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  flex-direction: column; /* Alinea elementos en columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  text-align: start; /* Asegura que el texto esté centrado */
+  margin-left: 20px;
 }
 
-.competitu {
-  text-align: center;
-  padding: 40px 0;
-}
-
-.competitu h2 {
-  font-weight: bold;
-  font-size: 29px;
-  padding: 10px 0;
-}
-
-.competitu p {
-  font-weight: normal;
-  font-size: 18px;
-  padding: 10px 0;
-}
-
-.compeimg {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 10px;
-  width: 100%;
-  padding-bottom: 40px;
-}
-
-.compe {
-  text-align: center;
-  padding: 10px;
-}
-
-/* Portafolio */
-#portafolio {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px 0;
-}
-
-.port {
-  background-size: cover;
-  background-position: center;
+main h1{
   color: white;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 20px;
-  aspect-ratio: 1;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.port span {
-  background-color: #ffffff1e;
-  padding: 6px 12px;
-  border-radius: 6px;
-}
-
-.port-1 { background-image: url(../assets/images/ranzao-mini.png); }
-.port-2 { background-image: url(../assets/images/patty.png); }
-.port-3 { background-image: url(../assets/images/phoyography.png); }
-.port-4 { background-image: url(../assets/images/lenocreativo.png); }
-
-.port:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Contacto */
-#contacto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 10px;
-  padding: 60px 20px;
-  text-align: center;
-  background-image: url(../assets/images/contactback.png);
-}
-
-.info {
-  font-size: clamp(16px, 2vw, 24px);
-  font-weight: 300;
+  font-size: 50px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
-
-#contacto h3 {
-  font-size: clamp(28px, 4vw, 56px);
-  font-weight: bold;
-  margin-bottom: 20px;
+main p{
+ color: white;
+ font-size: 22px;
+ font-weight: lighter;
+ margin-top: 10px;
 }
 
-.mail {
-  font-size: clamp(20px, 3vw, 29px);
-  font-weight: 400;
+/* Efecto hover */
+.nav-links li a:hover {
+  color: #ffcc00; /* Cambia el color al pasar el mouse */
 }
 
-/* Footer */
 footer {
-  background-color: black;
+  position: absolute; /* O 'fixed' si quieres que siempre esté visible */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 30px;
   color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-  border-radius: 10px;
-  margin-top: 20px;
   text-align: center;
-}
-
-.logo-footer img {
-  height: 60px;
-  width: auto;
-  margin-bottom: 20px;
-}
-
-footer ul {
-  list-style: none;
+  z-index: 2; /* Asegura que esté por encima del overlay */
   display: flex;
-  margin-bottom: 20px;
+  justify-content: space-between;
+}
+footer a {
+  padding: 0 5px;
+}
+footer a img{
+  height: 25px;
 }
 
-footer ul li {
-  padding: 0 10px;
-  margin: 20px 0;
-}
-
-footer p {
-  font-size: clamp(12px,4vw,24px);
-  margin-top: 10px;
+/* Aseguramos que el contenido esté por encima del overlay */
+nav, main {
+  position: relative;
+  z-index: 2;
 }
 
 /* Media Queries */
 
-@media (max-width: 1200px) {
-  .compeimg {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  #oficio {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #portafolio {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Móviles pequeños: hasta 319px */
+@media (max-width: 319px) {
+  /* Estilos específicos para pantallas muy pequeñas */
 }
 
-@media (max-width: 768px) {
-  .compeimg {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #oficio {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #portafolio {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto auto;
-    justify-content: center;
-    gap: 20px;
-  }
+/* Móviles: de 320px a 479px */
+@media (min-width: 320px) and (max-width: 479px) {
+  /* Estilos para móviles pequeños */
 }
 
-@media (max-width: 480px) {
-  .compeimg {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Móviles grandes y tablets verticales: de 480px a 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+  /* Estilos para móviles grandes y tablets en vertical */
+}
 
-  #oficio {
-    grid-template-columns: repeat(1, 1fr);
+/* Tablets horizontales y portátiles pequeños: de 768px a 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Mostrar el botón de menú */
+  .menu-toggle {
+    display: flex;
   }
+  
+  /* Ocultar los enlaces por defecto y mostrarlos como menú desplegable */
+  .nav-links {
+    position: absolute;
+    top: 70px; /* Ajusta según la altura de tu nav */
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+/* Cuando se active, se muestra el menú */
+.nav-links.active {
+  display: flex;
+}
 
-  #portafolio {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
+/* Ajusta el margen de cada elemento para el menú vertical */
+.nav-links li {
+  margin: 10px 0;
+}
+}
+
+/* Escritorios y pantallas grandes: 1024px en adelante */
+@media (min-width: 1024px) {
+  /* Estilos para dispositivos de escritorio y pantallas grandes */
 }
