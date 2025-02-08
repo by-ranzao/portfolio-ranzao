@@ -103,13 +103,13 @@ main {
 
 main h1{
   color: white;
-  font-size: 50px;
   font-weight: bold;
   margin-bottom: 10px;
+  font-size: clamp(24px, 5vw, 50px);
 }
 main p{
  color: white;
- font-size: 22px;
+ font-size: clamp(16px, 5vw, 22px);
  font-weight: lighter;
  margin-top: 10px;
 }
@@ -130,6 +130,10 @@ footer {
   z-index: 2; /* Asegura que esté por encima del overlay */
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+}
+footer p{
+  font-size: 13px;
 }
 footer a {
   padding: 0 5px;
@@ -158,7 +162,16 @@ nav, main {
 
 /* Móviles grandes y tablets verticales: de 480px a 767px */
 @media (max-width: 767px) {
-  /* Estilos para móviles grandes y tablets en vertical */
+  footer{
+    flex-direction:column-reverse;
+    align-items: start;
+  }
+  footer .social-icons{
+    margin-bottom: 20px;
+  }
+  footer p {
+    text-align: start;
+  }
 }
 
 /* Tablets horizontales y portátiles pequeños: de 768px a 1023px */
@@ -209,6 +222,7 @@ nav, main {
   nav {
     position: fixed; /* Mantiene el nav en la parte superior */
     width: 100%;
+    border-radius: 0;
     top: 0;
     left: 0;
     background: white;
