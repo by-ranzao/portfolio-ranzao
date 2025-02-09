@@ -154,7 +154,7 @@ main p span{
     background-size: cover;
     background-position: center;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 
 /* Efecto hover */
