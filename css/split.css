@@ -135,6 +135,9 @@ main p {
     font-weight: lighter;
     margin-top: 10px;
 }
+main p span{
+    font-weight: 400;
+}
 
 #split {
     height: 60vh;
@@ -167,6 +170,7 @@ main p {
     margin-top: 10px;
     font-size: clamp(10px, 4vw, 18px);
     font-weight: normal;
+    line-height: 140%;
 }
 
 
@@ -191,7 +195,9 @@ footer {
     justify-content: space-between;
     align-items: baseline;
 }
-
+body.no-scroll {
+    overflow: hidden;
+}
 footer p {
     font-size: 13px;
 }
@@ -226,9 +232,19 @@ main {
 
 /* Móviles grandes y tablets verticales: de 480px a 767px */
 @media (max-width: 767px) {
+    body{
+        height: auto;
+    }
+    .logo img {
+        color: black;
+        height: 30px;
+        /* Ajusta según el tamaño del logo */
+    }
     footer {
         flex-direction: column-reverse;
         align-items: start;
+        position: relative;
+        background-color: white;
     }
 
     footer .social-icons {
@@ -300,6 +316,7 @@ main {
             left: 0;
             background: white;
             z-index: 1001;
+            overflow: hidden;
             /* Un nivel más alto que el menú */
         }
     }
