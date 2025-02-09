@@ -12,7 +12,6 @@ body {
     position: relative;
     background-color: #F0F0F0;
     width: 100%;
-    background: url('../assets/images/about.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +28,6 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
     /* Overlay negro con 20% de opacidad */
     z-index: 0;
     /* Asegura que quede debajo del contenido */
@@ -102,8 +100,8 @@ nav {
 }
 
 main {
-    height: 40vh; /* Define altura relativa */
     width: 100%;
+    height: 40vh;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -122,57 +120,42 @@ main > div {
 }
 
 main h1 {
-    color: white;
+    color: black;
     font-weight: bold;
     margin-bottom: 10px;
     font-size: clamp(24px, 5vw, 50px);
 }
 
 main p {
-    color: white;
+    color: black;
     max-width: 800px;
     font-size: clamp(16px, 3vw, 22px); /* Reduce 5vw a 3vw para que ajuste antes */
-    font-weight: lighter;
+    font-weight: 200;
     margin-top: 10px;
 }
 main p span{
     font-weight: 400;
 }
 
-#split {
-    height: 60vh;
-    background-color: white;
+/* Sección portafolio */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
     width: 100%;
-    z-index: 2;
-    padding: 40px;
+}
+
+/* Estilos de cada elemento */
+.portfolio-item {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Mantiene los textos alineados a la izquierda */
     justify-content: center;
-    text-align: left;
-    /* Asegura alineación de texto */
+    align-items: center;
+    height: 250px; /* Tamaño fijo */
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-#split>div {
-    max-width: 800px;
-    /* Controla el ancho del contenido */
-    margin: 0 auto;
-    /* Centra el bloque horizontalmente */
-}
-
-#split h2 {
-    font-size: clamp(20px, 5vw, 29px);
-    margin: 0;
-}
-
-#split p {
-    margin-top: 10px;
-    font-size: clamp(10px, 4vw, 18px);
-    font-weight: normal;
-    line-height: 140%;
-}
-
 
 /* Efecto hover */
 .nav-links li a:hover {
@@ -181,7 +164,7 @@ main p span{
 }
 
 footer {
-    position: absolute;
+    position: relative;
     /* O 'fixed' si quieres que siempre esté visible */
     bottom: 0;
     left: 0;
@@ -232,6 +215,9 @@ main {
 
 /* Móviles grandes y tablets verticales: de 480px a 767px */
 @media (max-width: 767px) {
+    .portfolio {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
     body{
         height: auto;
     }
