@@ -43,7 +43,7 @@ nav {
   justify-content: space-between; /* Espaciado entre logo y enlaces */
   align-items: center;
   padding: 10px 20px;
-  background: white; /* Fondo semitransparente opcional */
+  background:white;
   z-index: 2;
   border-radius: 5px;
 }
@@ -193,7 +193,9 @@ nav, main {
   /* Ajustes para que el menú hamburguesa esté al frente */
 @media (max-width: 1023px) {
   /* Mostrar el botón de menú */
- 
+  .logo img {
+    height: 30px; /* Ajusta según el tamaño del logo */
+  }
   .menu-toggle {
     display: flex;
     z-index: 1001; /* Asegurar que el botón también está al frente */
