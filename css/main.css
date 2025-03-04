@@ -7,7 +7,9 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
-
+body{
+    background-color: #F6F6F6;
+}
 header {
     height: 100vh;
     display: flex;
@@ -50,23 +52,28 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
    
 }
 /* Secciónes */
 section {
-    padding: 60px;
-    margin: 20px;
+    padding: 20px 60px;
 }
 
 /* About */
 #about{
     display: flex;
+    margin-top: 60px;
     align-items: center;
+}
+.aboutimg img{
+    max-height: 233.65px;
+    width: auto;
 }
 .abouttxt{
     display: flex;
     flex-direction: column;
-    margin-left: 10rem;
+    margin-left: 8rem;
 }
 .abouttxt h1{
     font-weight: bold;
@@ -80,40 +87,82 @@ section {
 
 .expconte{
     display: grid;
-    padding: 20px;
     border-radius: 10px;
     align-items: center;
+    background-color: white;
     justify-content: center;
-    border: 1px solid black;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
     gap: 40px; /* Espacio entre los elementos */
 }
 
 .expconte div{
+    padding: 20px 10px;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
+.expconte div img{
+    border-radius: 5px;
+}
 .expconte div p{
-    margin-left: 10px;
+   margin-left: 20px;
+    font-size: 18px;
+}
+/* Portafolio */
+#portfolio{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+.bg-item {
+    width: 100%;
+    border-radius: 10px;
+    height: 260px; /* Ajusta la altura según necesites */
+    background-size: cover;
+    background-position: center;
+  }
+.contacto{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    font-size: 24px;
 }
 
+.contacto a{
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+footer{
+    padding: 10px 60px;
+}
+footer div{
+    background-color: black;
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+footer div p {
+    font-size: 18px;
+}
+footer p{
+    color: white;
+}
+.footerimg img{
+    margin: 0 10px;
+}
+.footerimg{
+    display: flex;
+    height: 0px;
+}
 /* Media Queries */
-
-body {
-    font-size: 16px;
-  }
-  
-  /* Para tablets y dispositivos de mayor resolución */
-  @media (max-width: 768px) {
-    .expconte{
-        grid-template-columns: 1fr;
-    }
-  }
-  
-  /* Para escritorios */
-  @media (min-width: 1024px) {
-    body {
-      font-size: 20px;
-    }
-  }
-  
