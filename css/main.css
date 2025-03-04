@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    padding: 4rem 20px 20px;
+}
+
+nav {
+    width: calc(100% - 40px);
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+   
+}
+/* Secciónes */
+section {
+    padding: 60px;
+    margin: 20px;
+}
+
+/* About */
+#about{
+    display: flex;
+    align-items: center;
+}
+.abouttxt{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rem;
+}
+.abouttxt h1{
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.abouttxt p {
+    text-align: justify;
+    font-size: 24px;
+}
+
+.expconte{
+    display: grid;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+    gap: 40px; /* Espacio entre los elementos */
+}
+
+.expconte div{
+    display: flex;
+    align-items: center;
+}
+.expconte div p{
+    margin-left: 10px;
+}
+
+/* Media Queries */
+
+body {
+    font-size: 16px;
+  }
+  
+  /* Para tablets y dispositivos de mayor resolución */
+  @media (max-width: 768px) {
+    .expconte{
+        grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Para escritorios */
+  @media (min-width: 1024px) {
+    body {
+      font-size: 20px;
+    }
+  }
+  
